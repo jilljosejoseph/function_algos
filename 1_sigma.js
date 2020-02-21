@@ -3,6 +3,14 @@
 
 function sigma(num){
     // YOUR CODE HERE
-}
+  console.log("adding up");
+  var sum= 0;
+
+  for(var i = 1; i <= num; i++) {   
+      sum = i + sum;
+  }
+  return sum;
+  } 
+
 var sum = sigma(5);
 console.log(sum);
