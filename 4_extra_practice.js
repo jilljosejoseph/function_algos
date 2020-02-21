@@ -12,12 +12,40 @@
 // sigma(0)                                 //Expected output: 0
 // sigma(-10)                               //Expected output: 0
 
+function sigma(num) {
+    // YOUR CODE HERE
+    console.log("adding up");
+    var sum = 0;
+
+    for (var i = 1; i <= num; i++) {
+        sum = i + sum;
+    }
+    return sum;
+}
+
+var sum = sigma(-10);
+console.log(sum);
+
 // greaterThanY Test Cases:
 // greaterThanY([5,6,7,8,9,10], 4)          //Expected output: 6
 // greaterThanY([5,6,7,8,9,10], 12)         //Expected output: 0
 // greaterThanY([1,6,8,3,5,2], -5)          //Expected output: 0
 // greaterThanY([-2,-6,-8,-3,-5,-2], -4)    //Expected output: 3
 // greaterThanY([], 5)                      //Expected output: 0
+
+function greaterThanY(arr, y) {
+    // YOUR CODE HERE
+    var count = 0;
+
+    for (i = 0; i < arr.length; i++) {
+        if (y < arr[i]) {
+            count = count + 1;
+        }
+    }
+    return count;
+}
+var result = greaterThanY([-2, -6, -8, -3, -5, -2], -4);
+console.log(result);
 
 
 // shiftLeft Test Cases:
@@ -26,6 +54,22 @@
 // shiftLeft([1,2])                         //Expected output: [2,0]
 // shiftLeft([1])                           //Expected output: [0]
 // shiftLeft([])                            //Expected output: []
+
+function shiftLeft(arr) {
+    var temp = 0;
+
+    for (i = 0; i < arr.length; i++) {
+        temp = arr[i + 1];
+        arr[i] = temp
+
+    }
+
+    arr.pop()
+    arr.push(0)
+    return arr
+}
+var resultArr = shiftLeft(["hello","hi","yo","wazzup"]);
+console.log(resultArr);
 
 
 
